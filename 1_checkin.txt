@@ -1,0 +1,8 @@
+2022-08-17T16:40:01.9111032Z ##[section]Starting: Prepare job checkin
+2022-08-17T16:40:01.9301226Z Evaluating strategy
+2022-08-17T16:40:01.9301426Z Creating job '__default'
+2022-08-17T16:40:01.9301690Z Evaluating timeout
+2022-08-17T16:40:01.9301717Z Evaluating cancel timeout
+2022-08-17T16:40:01.9301742Z Evaluating continue on error
+2022-08-17T16:40:01.9301769Z Evaluating target
+2022-08-17T16:40:01.9303173Z ##[section]Finishing: Prepare job checkin

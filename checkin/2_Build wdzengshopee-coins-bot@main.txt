@@ -1,0 +1,238 @@
+2022-08-17T16:40:13.9738192Z ##[group]Build container for action use: '/home/runner/work/_actions/wdzeng/shopee-coins-bot/main/Dockerfile'.
+2022-08-17T16:40:13.9815374Z ##[command]/usr/bin/docker build -t 94859b:af59d6fcea864b1c99884ae93923cb83 -f "/home/runner/work/_actions/wdzeng/shopee-coins-bot/main/Dockerfile" "/home/runner/work/_actions/wdzeng/shopee-coins-bot/main"
+2022-08-17T16:40:14.1156080Z Sending build context to Docker daemon  71.17kB
+2022-08-17T16:40:14.1156522Z 
+2022-08-17T16:40:14.1591601Z Step 1/14 : ARG BASE_IMAGE
+2022-08-17T16:40:14.1592318Z Step 2/14 : FROM alpine:3.16.1 AS alpine-base
+2022-08-17T16:40:14.5526851Z 3.16.1: Pulling from library/alpine
+2022-08-17T16:40:14.6620889Z 530afca65e2e: Pulling fs layer
+2022-08-17T16:40:14.8966009Z 530afca65e2e: Verifying Checksum
+2022-08-17T16:40:14.8970082Z 530afca65e2e: Download complete
+2022-08-17T16:40:15.0408310Z 530afca65e2e: Pull complete
+2022-08-17T16:40:15.0488725Z Digest: sha256:7580ece7963bfa863801466c0a488f11c86f85d9988051a9f9c68cb27f6b7872
+2022-08-17T16:40:15.0505663Z Status: Downloaded newer image for alpine:3.16.1
+2022-08-17T16:40:15.0518531Z  ---> d7d3d98c851f
+2022-08-17T16:40:15.0522586Z Step 3/14 : RUN apk add --no-cache chromium chromium-chromedriver nodejs tini     && adduser -u 1000 -H -D bot
+2022-08-17T16:40:15.1541627Z  ---> Running in c3c2c9212068
+2022-08-17T16:40:15.4644744Z fetch https://dl-cdn.alpinelinux.org/alpine/v3.16/main/x86_64/APKINDEX.tar.gz
+2022-08-17T16:40:15.5773205Z fetch https://dl-cdn.alpinelinux.org/alpine/v3.16/community/x86_64/APKINDEX.tar.gz
+2022-08-17T16:40:15.7948392Z (1/143) Installing libmagic (5.41-r0)
+2022-08-17T16:40:15.8256417Z (2/143) Installing file (5.41-r0)
+2022-08-17T16:40:15.8319029Z (3/143) Installing libxau (1.0.9-r0)
+2022-08-17T16:40:15.8525531Z (4/143) Installing libxdmcp (1.1.3-r0)
+2022-08-17T16:40:15.8587581Z (5/143) Installing libxcb (1.15-r0)
+2022-08-17T16:40:15.8740194Z (6/143) Installing libx11 (1.8-r0)
+2022-08-17T16:40:15.9109016Z (7/143) Installing libxext (1.3.4-r0)
+2022-08-17T16:40:15.9179252Z (8/143) Installing libice (1.0.10-r0)
+2022-08-17T16:40:15.9254124Z (9/143) Installing libuuid (2.38-r1)
+2022-08-17T16:40:15.9323233Z (10/143) Installing libsm (1.2.3-r0)
+2022-08-17T16:40:15.9405223Z (11/143) Installing libxt (1.2.1-r0)
+2022-08-17T16:40:15.9505942Z (12/143) Installing libxmu (1.1.3-r0)
+2022-08-17T16:40:15.9583121Z (13/143) Installing xset (1.2.4-r0)
+2022-08-17T16:40:15.9651451Z (14/143) Installing xprop (1.2.5-r0)
+2022-08-17T16:40:15.9726036Z (15/143) Installing xdg-utils (1.1.3-r3)
+2022-08-17T16:40:15.9834359Z (16/143) Installing eudev-libs (3.2.11-r0)
+2022-08-17T16:40:15.9911468Z (17/143) Installing pkgconf (1.8.0-r1)
+2022-08-17T16:40:15.9982680Z (18/143) Installing libffi (3.4.2-r1)
+2022-08-17T16:40:16.0046419Z (19/143) Installing libintl (0.21-r2)
+2022-08-17T16:40:16.0108253Z (20/143) Installing libblkid (2.38-r1)
+2022-08-17T16:40:16.0210668Z (21/143) Installing libmount (2.38-r1)
+2022-08-17T16:40:16.0314922Z (22/143) Installing pcre (8.45-r2)
+2022-08-17T16:40:16.0418171Z (23/143) Installing glib (2.72.1-r0)
+2022-08-17T16:40:16.0803063Z (24/143) Installing xz-libs (5.2.5-r1)
+2022-08-17T16:40:16.0877624Z (25/143) Installing libxml2 (2.9.14-r0)
+2022-08-17T16:40:16.1067673Z (26/143) Installing shared-mime-info (2.2-r0)
+2022-08-17T16:40:16.1254823Z (27/143) Installing hicolor-icon-theme (0.17-r1)
+2022-08-17T16:40:16.1454714Z (28/143) Installing libjpeg-turbo (2.1.3-r1)
+2022-08-17T16:40:16.1604064Z (29/143) Installing libpng (1.6.37-r1)
+2022-08-17T16:40:16.1689375Z (30/143) Installing libwebp (1.2.3-r0)
+2022-08-17T16:40:16.1898083Z (31/143) Installing zstd-libs (1.5.2-r1)
+2022-08-17T16:40:16.2023875Z (32/143) Installing tiff (4.3.0-r1)
+2022-08-17T16:40:16.2135184Z (33/143) Installing gdk-pixbuf (2.42.8-r0)
+2022-08-17T16:40:16.2265971Z (34/143) Installing gtk-update-icon-cache (2.24.33-r3)
+2022-08-17T16:40:16.2333966Z (35/143) Installing libxcomposite (0.4.5-r0)
+2022-08-17T16:40:16.2423508Z (36/143) Installing libxfixes (6.0.0-r0)
+2022-08-17T16:40:16.2492629Z (37/143) Installing libxrender (0.9.10-r3)
+2022-08-17T16:40:16.2555826Z (38/143) Installing libxcursor (1.2.1-r0)
+2022-08-17T16:40:16.2655145Z (39/143) Installing libxdamage (1.1.5-r1)
+2022-08-17T16:40:16.2726765Z (40/143) Installing libxi (1.8-r0)
+2022-08-17T16:40:16.2801866Z (41/143) Installing libxinerama (1.1.4-r1)
+2022-08-17T16:40:16.2870841Z (42/143) Installing libxrandr (1.5.2-r1)
+2022-08-17T16:40:16.2972130Z (43/143) Installing atk (2.38.0-r0)
+2022-08-17T16:40:16.3062294Z (44/143) Installing libxtst (1.2.3-r3)
+2022-08-17T16:40:16.3139926Z (45/143) Installing dbus-libs (1.14.0-r1)
+2022-08-17T16:40:16.3235636Z (46/143) Installing at-spi2-core (2.44.1-r0)
+2022-08-17T16:40:16.3449306Z (47/143) Installing at-spi2-atk (2.38.0-r0)
+2022-08-17T16:40:16.3542649Z (48/143) Installing expat (2.4.8-r0)
+2022-08-17T16:40:16.3654007Z (49/143) Installing brotli-libs (1.0.9-r6)
+2022-08-17T16:40:16.3789086Z (50/143) Installing libbz2 (1.0.8-r1)
+2022-08-17T16:40:16.3855142Z (51/143) Installing freetype (2.12.1-r0)
+2022-08-17T16:40:16.4000214Z (52/143) Installing fontconfig (2.14.0-r0)
+2022-08-17T16:40:16.4149879Z (53/143) Installing pixman (0.40.0-r3)
+2022-08-17T16:40:16.4276668Z (54/143) Installing cairo (1.17.4-r2)
+2022-08-17T16:40:16.4759470Z (55/143) Installing cairo-gobject (1.17.4-r2)
+2022-08-17T16:40:16.4823747Z (56/143) Installing avahi-libs (0.8-r6)
+2022-08-17T16:40:16.4897276Z (57/143) Installing gmp (6.2.1-r2)
+2022-08-17T16:40:16.5018172Z (58/143) Installing nettle (3.7.3-r0)
+2022-08-17T16:40:16.5144581Z (59/143) Installing p11-kit (0.24.1-r0)
+2022-08-17T16:40:16.5306944Z (60/143) Installing libtasn1 (4.18.0-r0)
+2022-08-17T16:40:16.5373602Z (61/143) Installing libunistring (1.0-r0)
+2022-08-17T16:40:16.5562975Z (62/143) Installing gnutls (3.7.7-r0)
+2022-08-17T16:40:16.5806879Z (63/143) Installing cups-libs (2.4.2-r0)
+2022-08-17T16:40:16.5925999Z (64/143) Installing libepoxy (1.5.10-r0)
+2022-08-17T16:40:16.6054945Z (65/143) Installing fribidi (1.0.12-r0)
+2022-08-17T16:40:16.6123507Z (66/143) Installing graphite2 (1.3.14-r1)
+2022-08-17T16:40:16.6199078Z (67/143) Installing harfbuzz (4.3.0-r0)
+2022-08-17T16:40:16.6410592Z (68/143) Installing libxft (2.3.4-r0)
+2022-08-17T16:40:16.6476439Z (69/143) Installing pango (1.50.7-r0)
+2022-08-17T16:40:16.6607919Z (70/143) Installing wayland-libs-client (1.20.0-r0)
+2022-08-17T16:40:16.6687425Z (71/143) Installing wayland-libs-cursor (1.20.0-r0)
+2022-08-17T16:40:16.6755006Z (72/143) Installing wayland-libs-egl (1.20.0-r0)
+2022-08-17T16:40:16.6839404Z (73/143) Installing xkeyboard-config (2.35.1-r0)
+2022-08-17T16:40:16.7239291Z (74/143) Installing libxkbcommon (1.4.1-r0)
+2022-08-17T16:40:16.7341684Z (75/143) Installing gtk+3.0 (3.24.34-r1)
+2022-08-17T16:40:16.8297211Z Executing gtk+3.0-3.24.34-r1.post-install
+2022-08-17T16:40:16.8458032Z (76/143) Installing libfontenc (1.1.4-r0)
+2022-08-17T16:40:16.8521995Z (77/143) Installing mkfontscale (1.2.2-r0)
+2022-08-17T16:40:16.8599301Z (78/143) Installing font-opensans (0_git20210927-r0)
+2022-08-17T16:40:16.9020129Z (79/143) Installing libgcc (11.2.1_git20220219-r2)
+2022-08-17T16:40:16.9088980Z (80/143) Installing libogg (1.3.5-r1)
+2022-08-17T16:40:16.9202988Z (81/143) Installing libstdc++ (11.2.1_git20220219-r2)
+2022-08-17T16:40:16.9418037Z (82/143) Installing flac (1.3.4-r0)
+2022-08-17T16:40:16.9547886Z (83/143) Installing alsa-lib (1.2.7.2-r0)
+2022-08-17T16:40:16.9769685Z (84/143) Installing libatomic (11.2.1_git20220219-r2)
+2022-08-17T16:40:16.9830351Z (85/143) Installing sdl2 (2.0.22-r0)
+2022-08-17T16:40:17.0033547Z (86/143) Installing aom-libs (3.3.0-r0)
+2022-08-17T16:40:17.0701475Z (87/143) Installing libass (0.16.0-r0)
+2022-08-17T16:40:17.0785144Z (88/143) Installing libdav1d (1.0.0-r0)
+2022-08-17T16:40:17.0983835Z (89/143) Installing libpciaccess (0.16-r0)
+2022-08-17T16:40:17.1051968Z (90/143) Installing libdrm (2.4.110-r0)
+2022-08-17T16:40:17.1197009Z (91/143) Installing ncurses-terminfo-base (6.3_p20220521-r0)
+2022-08-17T16:40:17.1285985Z (92/143) Installing ncurses-libs (6.3_p20220521-r0)
+2022-08-17T16:40:17.1397741Z (93/143) Installing lame (3.100-r0)
+2022-08-17T16:40:17.1526973Z (94/143) Installing opus (1.3.1-r1)
+2022-08-17T16:40:17.1664432Z (95/143) Installing libasyncns (0.8-r1)
+2022-08-17T16:40:17.1732833Z (96/143) Installing libltdl (2.4.7-r0)
+2022-08-17T16:40:17.1809574Z (97/143) Installing orc (0.4.32-r0)
+2022-08-17T16:40:17.1924009Z (98/143) Installing libvorbis (1.3.7-r0)
+2022-08-17T16:40:17.2052156Z (99/143) Installing libsndfile (1.1.0-r0)
+2022-08-17T16:40:17.2204189Z (100/143) Installing libgomp (11.2.1_git20220219-r2)
+2022-08-17T16:40:17.2289966Z (101/143) Installing soxr (0.1.3-r2)
+2022-08-17T16:40:17.2401780Z (102/143) Installing speexdsp (1.2.0-r0)
+2022-08-17T16:40:17.2542009Z (103/143) Installing tdb-libs (1.4.6-r0)
+2022-08-17T16:40:17.2672323Z (104/143) Installing libpulse (15.0-r2)
+2022-08-17T16:40:17.2888483Z (105/143) Installing cjson (1.7.15-r3)
+2022-08-17T16:40:17.3125906Z (106/143) Installing mbedtls (2.28.1-r0)
+2022-08-17T16:40:17.3362096Z (107/143) Installing librist (0.2.6-r1)
+2022-08-17T16:40:17.3496796Z (108/143) Installing libsrt (1.4.4-r0)
+2022-08-17T16:40:17.3623389Z (109/143) Installing libssh (0.9.6-r1)
+2022-08-17T16:40:17.3738950Z (110/143) Installing libtheora (1.1.1-r16)
+2022-08-17T16:40:17.3915691Z (111/143) Installing v4l-utils-libs (1.22.1-r1)
+2022-08-17T16:40:17.4019630Z (112/143) Installing libva (2.14.0-r0)
+2022-08-17T16:40:17.4233846Z (113/143) Installing libvdpau (1.5-r0)
+2022-08-17T16:40:17.4319434Z (114/143) Installing vidstab (1.1.0-r1)
+2022-08-17T16:40:17.4401152Z (115/143) Installing libvpx (1.11.0-r1)
+2022-08-17T16:40:17.4742304Z (116/143) Installing x264-libs (0.163_git20210613-r0)
+2022-08-17T16:40:17.5014606Z (117/143) Installing numactl (2.0.14-r0)
+2022-08-17T16:40:17.5078737Z (118/143) Installing x265-libs (3.5-r3)
+2022-08-17T16:40:17.6063637Z (119/143) Installing xvidcore (1.3.7-r1)
+2022-08-17T16:40:17.6378662Z (120/143) Installing ffmpeg-libs (5.0.1-r1)
+2022-08-17T16:40:17.8546782Z (121/143) Installing libevent (2.1.12-r4)
+2022-08-17T16:40:17.8684253Z (122/143) Installing mesa (21.3.8-r2)
+2022-08-17T16:40:17.8753813Z (123/143) Installing wayland-libs-server (1.20.0-r0)
+2022-08-17T16:40:17.8828516Z (124/143) Installing mesa-gbm (21.3.8-r2)
+2022-08-17T16:40:17.8913709Z (125/143) Installing icu-data-en (71.1-r2)
+2022-08-17T16:40:17.9179242Z Executing icu-data-en-71.1-r2.post-install
+2022-08-17T16:40:17.9194096Z [91m*
+2022-08-17T16:40:17.9194483Z * If you need ICU with non-English locales and legacy charset support, install
+2022-08-17T16:40:17.9194800Z * package icu-data-full.
+2022-08-17T16:40:17.9195019Z *
+2022-08-17T16:40:17.9198431Z [0m(126/143) Installing icu-libs (71.1-r2)
+2022-08-17T16:40:17.9674140Z (127/143) Installing lcms2 (2.13.1-r0)
+2022-08-17T16:40:17.9778809Z (128/143) Installing minizip (1.2.12-r0)
+2022-08-17T16:40:17.9846337Z (129/143) Installing nspr (4.33-r0)
+2022-08-17T16:40:17.9942937Z (130/143) Installing sqlite-libs (3.38.5-r0)
+2022-08-17T16:40:18.0137712Z (131/143) Installing nss (3.78.1-r0)
+2022-08-17T16:40:18.0593458Z (132/143) Installing re2 (2022.04.01-r0)
+2022-08-17T16:40:18.0689644Z (133/143) Installing snappy (1.1.9-r4)
+2022-08-17T16:40:18.0758972Z (134/143) Installing libgpg-error (1.45-r0)
+2022-08-17T16:40:18.0839859Z (135/143) Installing libgcrypt (1.10.1-r0)
+2022-08-17T16:40:18.1020496Z (136/143) Installing libxslt (1.1.35-r0)
+2022-08-17T16:40:18.1219779Z (137/143) Installing chromium (102.0.5005.173-r0)
+2022-08-17T16:40:19.9509806Z (138/143) Installing chromium-chromedriver (102.0.5005.173-r0)
+2022-08-17T16:40:20.0729752Z (139/143) Installing ca-certificates (20220614-r0)
+2022-08-17T16:40:20.0898214Z (140/143) Installing nghttp2-libs (1.47.0-r0)
+2022-08-17T16:40:20.0974893Z (141/143) Installing c-ares (1.18.1-r0)
+2022-08-17T16:40:20.1040858Z (142/143) Installing nodejs (16.16.0-r0)
+2022-08-17T16:40:20.3806094Z (143/143) Installing tini (0.19.0-r0)
+2022-08-17T16:40:20.3928933Z Executing busybox-1.35.0-r15.trigger
+2022-08-17T16:40:20.3963668Z Executing glib-2.72.1-r0.trigger
+2022-08-17T16:40:20.3998235Z Executing shared-mime-info-2.2-r0.trigger
+2022-08-17T16:40:23.2642504Z Executing gdk-pixbuf-2.42.8-r0.trigger
+2022-08-17T16:40:23.2699523Z Executing gtk-update-icon-cache-2.24.33-r3.trigger
+2022-08-17T16:40:23.2813205Z Executing fontconfig-2.14.0-r0.trigger
+2022-08-17T16:40:23.2949304Z Executing mkfontscale-1.2.2-r0.trigger
+2022-08-17T16:40:23.3059562Z Executing ca-certificates-20220614-r0.trigger
+2022-08-17T16:40:23.3436431Z OK: 397 MiB in 157 packages
+2022-08-17T16:40:28.4020201Z Removing intermediate container c3c2c9212068
+2022-08-17T16:40:28.4020711Z  ---> fbe79a19bf76
+2022-08-17T16:40:28.4025000Z Step 4/14 : ENV CHROME_BIN=/usr/bin/chromium-browser CHROME_PATH=/usr/lib/chromium/
+2022-08-17T16:40:28.4290066Z  ---> Running in 73ab123c8085
+2022-08-17T16:40:29.0136701Z Removing intermediate container 73ab123c8085
+2022-08-17T16:40:29.0137012Z  ---> ab30070f680b
+2022-08-17T16:40:29.0137286Z Step 5/14 : FROM alpine-base AS alpine-font
+2022-08-17T16:40:29.0137542Z  ---> ab30070f680b
+2022-08-17T16:40:29.0137802Z Step 6/14 : RUN apk add --no-cache font-noto-cjk
+2022-08-17T16:40:29.0376308Z  ---> Running in 997244ebbb12
+2022-08-17T16:40:29.2712431Z fetch https://dl-cdn.alpinelinux.org/alpine/v3.16/main/x86_64/APKINDEX.tar.gz
+2022-08-17T16:40:29.3724878Z fetch https://dl-cdn.alpinelinux.org/alpine/v3.16/community/x86_64/APKINDEX.tar.gz
+2022-08-17T16:40:29.5934250Z (1/1) Installing font-noto-cjk (0_git20211026-r0)
+2022-08-17T16:40:30.6941701Z Executing fontconfig-2.14.0-r0.trigger
+2022-08-17T16:40:30.7952732Z Executing mkfontscale-1.2.2-r0.trigger
+2022-08-17T16:40:30.8112690Z OK: 485 MiB in 158 packages
+2022-08-17T16:40:32.0843557Z Removing intermediate container 997244ebbb12
+2022-08-17T16:40:32.0843895Z  ---> f2f01e04d1de
+2022-08-17T16:40:32.0844158Z Step 7/14 : FROM ${BASE_IMAGE}
+2022-08-17T16:40:32.0850294Z base name (${BASE_IMAGE}) should not be blank
+2022-08-17T16:40:32.0879376Z ##[warning]Docker build failed with exit code 1, back off 7.808 seconds before retry.
+2022-08-17T16:40:39.8948499Z ##[command]/usr/bin/docker build -t 94859b:af59d6fcea864b1c99884ae93923cb83 -f "/home/runner/work/_actions/wdzeng/shopee-coins-bot/main/Dockerfile" "/home/runner/work/_actions/wdzeng/shopee-coins-bot/main"
+2022-08-17T16:40:39.9231964Z Sending build context to Docker daemon  71.17kB
+2022-08-17T16:40:39.9232543Z 
+2022-08-17T16:40:39.9639077Z Step 1/14 : ARG BASE_IMAGE
+2022-08-17T16:40:39.9639446Z Step 2/14 : FROM alpine:3.16.1 AS alpine-base
+2022-08-17T16:40:39.9639702Z  ---> d7d3d98c851f
+2022-08-17T16:40:39.9640064Z Step 3/14 : RUN apk add --no-cache chromium chromium-chromedriver nodejs tini     && adduser -u 1000 -H -D bot
+2022-08-17T16:40:39.9643049Z  ---> Using cache
+2022-08-17T16:40:39.9643661Z  ---> fbe79a19bf76
+2022-08-17T16:40:39.9644153Z Step 4/14 : ENV CHROME_BIN=/usr/bin/chromium-browser CHROME_PATH=/usr/lib/chromium/
+2022-08-17T16:40:39.9646912Z  ---> Using cache
+2022-08-17T16:40:39.9647249Z  ---> ab30070f680b
+2022-08-17T16:40:39.9647523Z Step 5/14 : FROM alpine-base AS alpine-font
+2022-08-17T16:40:39.9650117Z  ---> ab30070f680b
+2022-08-17T16:40:39.9650696Z Step 6/14 : RUN apk add --no-cache font-noto-cjk
+2022-08-17T16:40:39.9653770Z  ---> Using cache
+2022-08-17T16:40:39.9653993Z  ---> f2f01e04d1de
+2022-08-17T16:40:39.9654226Z Step 7/14 : FROM ${BASE_IMAGE}
+2022-08-17T16:40:39.9660658Z base name (${BASE_IMAGE}) should not be blank
+2022-08-17T16:40:39.9689634Z ##[warning]Docker build failed with exit code 1, back off 4.475 seconds before retry.
+2022-08-17T16:40:44.4397007Z ##[command]/usr/bin/docker build -t 94859b:af59d6fcea864b1c99884ae93923cb83 -f "/home/runner/work/_actions/wdzeng/shopee-coins-bot/main/Dockerfile" "/home/runner/work/_actions/wdzeng/shopee-coins-bot/main"
+2022-08-17T16:40:44.4669112Z Sending build context to Docker daemon  71.17kB
+2022-08-17T16:40:44.4669634Z 
+2022-08-17T16:40:44.5054997Z Step 1/14 : ARG BASE_IMAGE
+2022-08-17T16:40:44.5055971Z Step 2/14 : FROM alpine:3.16.1 AS alpine-base
+2022-08-17T16:40:44.5058441Z  ---> d7d3d98c851f
+2022-08-17T16:40:44.5059198Z Step 3/14 : RUN apk add --no-cache chromium chromium-chromedriver nodejs tini     && adduser -u 1000 -H -D bot
+2022-08-17T16:40:44.5071970Z  ---> Using cache
+2022-08-17T16:40:44.5072964Z base name (${BASE_IMAGE}) should not be blank
+2022-08-17T16:40:44.5073232Z  ---> fbe79a19bf76
+2022-08-17T16:40:44.5073922Z Step 4/14 : ENV CHROME_BIN=/usr/bin/chromium-browser CHROME_PATH=/usr/lib/chromium/
+2022-08-17T16:40:44.5074239Z  ---> Using cache
+2022-08-17T16:40:44.5074449Z  ---> ab30070f680b
+2022-08-17T16:40:44.5074700Z Step 5/14 : FROM alpine-base AS alpine-font
+2022-08-17T16:40:44.5074945Z  ---> ab30070f680b
+2022-08-17T16:40:44.5075202Z Step 6/14 : RUN apk add --no-cache font-noto-cjk
+2022-08-17T16:40:44.5075455Z  ---> Using cache
+2022-08-17T16:40:44.5075657Z  ---> f2f01e04d1de
+2022-08-17T16:40:44.5075871Z Step 7/14 : FROM ${BASE_IMAGE}
+2022-08-17T16:40:44.5091048Z ##[endgroup]
+2022-08-17T16:40:44.5181377Z ##[error]Docker build failed with exit code 1

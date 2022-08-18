@@ -1,0 +1,38 @@
+2022-08-17T16:40:12.4986800Z Current runner version: '2.295.0'
+2022-08-17T16:40:12.5017413Z ##[group]Operating System
+2022-08-17T16:40:12.5017976Z Ubuntu
+2022-08-17T16:40:12.5018266Z 20.04.4
+2022-08-17T16:40:12.5018562Z LTS
+2022-08-17T16:40:12.5018943Z ##[endgroup]
+2022-08-17T16:40:12.5019290Z ##[group]Virtual Environment
+2022-08-17T16:40:12.5019674Z Environment: ubuntu-20.04
+2022-08-17T16:40:12.5020055Z Version: 20220814.1
+2022-08-17T16:40:12.5020620Z Included Software: https://github.com/actions/runner-images/blob/ubuntu20/20220814.1/images/linux/Ubuntu2004-Readme.md
+2022-08-17T16:40:12.5021233Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu20%2F20220814.1
+2022-08-17T16:40:12.5021681Z ##[endgroup]
+2022-08-17T16:40:12.5022036Z ##[group]Runner Image Provisioner
+2022-08-17T16:40:12.5022430Z 1.0.0.0-main-20220812-3
+2022-08-17T16:40:12.5022757Z ##[endgroup]
+2022-08-17T16:40:12.5023711Z ##[group]GITHUB_TOKEN Permissions
+2022-08-17T16:40:12.5024287Z Actions: write
+2022-08-17T16:40:12.5024635Z Checks: write
+2022-08-17T16:40:12.5025186Z Contents: write
+2022-08-17T16:40:12.5025473Z Deployments: write
+2022-08-17T16:40:12.5025853Z Discussions: write
+2022-08-17T16:40:12.5026129Z Issues: write
+2022-08-17T16:40:12.5026450Z Metadata: read
+2022-08-17T16:40:12.5026785Z Packages: write
+2022-08-17T16:40:12.5027124Z Pages: write
+2022-08-17T16:40:12.5027450Z PullRequests: write
+2022-08-17T16:40:12.5027824Z RepositoryProjects: write
+2022-08-17T16:40:12.5028184Z SecurityEvents: write
+2022-08-17T16:40:12.5028538Z Statuses: write
+2022-08-17T16:40:12.5028806Z ##[endgroup]
+2022-08-17T16:40:12.5032576Z Secret source: Actions
+2022-08-17T16:40:12.5033078Z Prepare workflow directory
+2022-08-17T16:40:12.6016340Z Prepare all required actions
+2022-08-17T16:40:12.6200006Z Getting action download info
+2022-08-17T16:40:12.8322261Z Download action repository 'wdzeng/shopee-coins-bot@main' (SHA:f8f260dfa42ac83f0a0e3a1546ce65259bfe77a8)
+2022-08-17T16:40:13.1771680Z Download action repository 'actions/checkout@v3' (SHA:2541b1294d2704b0964813337f33b291d3f8596b)
+2022-08-17T16:40:13.3773182Z Download action repository 'actions/upload-artifact@v3' (SHA:3cea5372237819ed00197afe530f5a7ea3e805c8)
+2022-08-17T16:40:13.5860729Z Download action repository 'peaceiris/actions-gh-pages@v3' (SHA:068dc23d9710f1ba62e86896f84735d869951305)
